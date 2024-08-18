@@ -1,6 +1,7 @@
 const fs=require('fs')
 const http=require('http')
 
+const PORT = process.env.PORT;
 
 function currentdatetime(){
     
@@ -56,4 +57,4 @@ const server= http.createServer((request,response)=>{
     }
 })
 
-server.listen(8000,()=>console.log('Server is up and running in http://localhost:8000'))
+server.listen(PORT, () => console.log(`The server started in: ${PORT}`))
